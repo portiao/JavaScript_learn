@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array-map()</title>
+</head>
+<body>
+    <script>
+        // map() 創造新的array, "call back function"
+
+        //範例1.
+        let languages = ["C++", "Python", "JS", "Java"];
+
+        let upperlaguages = languages.map(function(i){
+            return i.toLocaleUpperCase();
+        });
+        console.log(upperlaguages);  //["C++", "PYTHON", "JS", "JAVA"]
+
+
+        //範例2.
+        const langu = [
+            {name:"Python", rating:9.5, popularity:9.7, trending:"super hot"},
+            {name:"Java", rating:8.6, popularity:8.2, trending:"same"},
+            {name:"C++", rating:6.6, popularity:7.7, trending:"same"},
+            {name:"PHP", rating:2.5, popularity:4.7, trending:"decreasng"},
+            {name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"},
+        ];
+
+        let newLanguages = langu.map(lang =>{
+            return lang.name.toUpperCase();
+        })
+
+        console.log(newLanguages); //["PYTHON", "JAVA", "C++", "PHP", "JAVASCRIPT"]
+        
+    </script>
+</body>
+</html>

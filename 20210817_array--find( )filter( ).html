@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array--find( )filter()</title>
+</head>
+<body>
+    <script>
+        //find () 回傳第一個element
+        const languages = [
+            {name:"Python", rating:9.5, popularity:9.7, trending:"super hot"},
+            {name:"Java", rating:8.6, popularity:8.2, trending:"same"},
+            {name:"C++", rating:6.6, popularity:7.7, trending:"same"},
+            {name:"PHP", rating:2.5, popularity:4.7, trending:"decreasng"},
+            {name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"},
+        ];
+
+        let result = languages.find(lang =>{
+            return lang.rating > 7.5;
+        }) 
+        console.log(result);  // [name:"Python", rating:9.5, popularity:9.7, trending:"super hot"]
+        
+        //filter() 回傳全部符合的element
+
+        const lang = [
+            {name:"Python", rating:9.5, popularity:9.7, trending:"super hot"},
+            {name:"Java", rating:8.6, popularity:8.2, trending:"same"},
+            {name:"C++", rating:6.6, popularity:7.7, trending:"same"},
+            {name:"PHP", rating:2.5, popularity:4.7, trending:"decreasng"},
+            {name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"},
+        ];
+
+        let answer = lang.filter(langes =>{
+            return langes.rating > 7.5;
+        }) 
+        console.log(answer); 
+        //[name:"Python", rating:9.5, popularity:9.7, trending:"super hot"]
+        //[name:"Java", rating:8.6, popularity:8.2, trending:"same"]
+        //[name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"]
+
+    </script>
+</body>
+</html>
