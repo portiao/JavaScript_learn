@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in loop</title>
+</head>
+<body>
+    <script>
+        //for in loop (可用在'object'跟 array)
+        //範例 1.
+        let Portia ={
+            name:"Portia Chen",
+            age: 18
+        }
+        for (let i in Portia){
+            console.log(i);
+        }
+        // name  age
+        for (let i in Portia){
+            console.log(Portia[i]);
+        }
+        //Portia Chen  18
+
+
+        //範例 2.
+        let numbers = [10, 20, 30];
+        for(let a in numbers){
+            console.log(a);
+        }  //0 1 2
+
+
+        for(let a in numbers){
+            console.log(numbers[a]);
+        }  //10 20 30
+    </script>
+</body>
+</html>
