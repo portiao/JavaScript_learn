@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array--some( )every( )</title>
+</head>
+<body>
+    <script>
+        //some( ) 有些，回傳true/false
+        const languages = [
+            {name:"Python", rating:9.5, popularity:9.7, trending:"super hot"},
+            {name:"Java", rating:8.6, popularity:8.2, trending:"same"},
+            {name:"C++", rating:6.6, popularity:7.7, trending:"same"},
+            {name:"PHP", rating:2.5, popularity:4.7, trending:"decreasng"},
+            {name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"},
+        ];
+
+        let result = languages.some(lang =>{
+            return lang.rating > 10.5;
+        }) 
+
+        console.log(result); //false
+
+        //every( ) 全部符合，回傳true/false
+        const lang = [
+            {name:"Python", rating:9.5, popularity:9.7, trending:"super hot"},
+            {name:"Java", rating:8.6, popularity:8.2, trending:"same"},
+            {name:"C++", rating:6.6, popularity:7.7, trending:"same"},
+            {name:"PHP", rating:2.5, popularity:4.7, trending:"decreasng"},
+            {name:"JavaScript", rating:8.5, popularity:8.1, trending:"same"},
+        ];
+
+        let news = lang.every(langee =>{
+            return langee.rating > 9.4;
+        }) //false
+
+        let newa = lang.every(langee =>{
+            return langee.rating > 2.4;
+        }) //true
+    </script>
+    
+</body>
+</html>
