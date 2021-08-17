@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array--sort( )</title>
+</head>
+<body>
+    <script>
+    //sort ( ) 排列 
+    //範例 1.
+    let frusit = ["Grapes", "Apple", "Banana"];
+
+    console.log(frusit.sort());
+    //["Apple", "Banana", "Grapes"]
+
+
+     //範例 2.
+    let A = ["Grapes", "Apple", "Banana"];
+
+    A.sort();
+    console.log(A); //sort會改變原本的array
+    //["Apple", "Banana", "Grapes"]
+
+
+     //範例 3.
+     let luckies = [15, 23, 1, 2, 16];
+     console.log(luckies.sort()); 
+     //只會依照第一個數字去做排列(string comparison)
+    //[1, 15, 16, 2, 23]
+
+
+    //範例 4. 此作法才會正確排序
+    let numBer = [15, 23, 1, 2, 16 ,99];
+    numBer.sort((a, b) => {
+        return a -b;
+    })
+    console.log(numBer);
+    //[1, 2, 15, 16, 23, 99]
+    //b-a 就是降冪排序
+
+
+    //範例 5. 排序英文長度
+    let english = ["Apple", "Bananan", "Watermelon", "lemon"];
+    english.sort((a,b) => {
+        return a.length - b.length;
+    })
+    console.log(english);
+    //["Apple", "lemon", "Bananan", "Watermelon"]
+    //b-a 就是降冪排序
+
+    </script>
+   
+
+</body>
+</html>
