@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaN and Infinity</title>
+  </head>
+  <body>
+
+
+
+    
+    <script>
+      //NaN (not a number),typeof=number (對number及string做運算時出現)
+
+      console.log(0 / 0); //NaN，與微積分內不定型概念相同
+      NaN == NaN; //false ,值不相等
+
+      /**範例1.(此用法錯誤)
+       * let result = ( 0 / 0);
+       * console.log(result == NaN);//false ;
+       * */
+
+      // 範例2.(判斷是否為NaN,要使用isNaN,來判斷布林值)
+      let result = 0 / 0;
+      console.log(isNaN(result)); //true ;
+
+      //Infinity 無限大意思,typeof=number
+      console.log(1000 / 0); //Infinity；任何數除以0會出現無限大
+      console.log(Infinity * 5); //Infinity，無限大*5 ，還是無限大
+      console.log(Infinity / Infinity); //NaN，與微積分內不定型概念相同
+    </script>
+  </body>
+</html>
