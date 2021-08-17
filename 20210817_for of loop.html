@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of loop</title>
+</head>
+<body>
+    <script>
+        let numbers = [10, 20, 30];
+
+        //for loop
+        for (let i=0; i < numbers.length; i++){
+            console.log(numbers[i]);
+        }
+
+        //forEach method (可閱讀性較高)
+        numbers.forEach(n =>{
+            console.log(n);
+        })
+
+        //for of loop *只能用在string、array之類*
+        for (let n of numbers){
+            console.log(n);
+        }
+
+    </script>
+</body>
+</html>
