@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concat_array相加</title>
+  </head>
+  <body>
+
+
+
+    <script>
+      let friends1 = ["Mike", "Portia", "Josh"];
+      let friends2 = ["Jim", "Fion", "Erica"];
+
+      /**
+       * let friends = friends1 + friends2;
+       * console.log(friends); //顯示 Mike,Portia,JoshJim,Fion,Erica
+       * console.log(typeof friends); //string; array相加會成為字串
+       */
+
+      //concat() →用於合併兩個或多個陣列
+      let friends = friends1.concat(friends2);
+      console.log(friends); //object
+
+      
+    </script>
+  </body>
+</html>
