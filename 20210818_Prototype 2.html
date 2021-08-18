@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        //Prototype in Inheritance(繼承)
+        function Person(name, age, height, weight){
+            this.name = name,
+            this.age = age,
+            this.height = height,
+            this.weight = weight 
+        }
+
+        Person.prototype.sayHi = function(){
+            console.log(this.name + " says hi.");
+        }
+
+        Person.prototype.intro = function(){
+            console.log("Hi my name is " + this.name + ".");
+        }
+        
+        function Student(name, age, height, weight, major, grade){
+            //this keyword refers to Student
+            Person.call(this,name, age, height, weight);
+            this.major,
+            this.grade
+        }
+
+        Student.prototype = Object.create(Person.prototype); // 重要!!
+
+        let Wilson = new Student("Wilson Ren", 25, 179, 78, "cs", 3.85);
+        console.log(Wilson);
+
+        Wilson.sayHi();
+        //Student {name: "Wilson Ren", age: 25, height: 179, weight: 78}
+        //Wilson Ren says hi.
+    </script>
+</body>
+</html>
