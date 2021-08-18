@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+<body>
+    <script>
+
+        //範例 2.
+        let myName = "Portia";
+
+        function sayHi(){
+            console.log(myName + " says hi.");
+
+
+            function sayHi2(){
+                console.log(myName + " says hi."); 
+            }
+
+            function sayHi3(){
+                let myName = "Erica";
+                sayHi2();
+            }
+            sayHi3();
+        }
+
+
+        sayHi();
+
+        //Portia says hi.
+        //Portia says hi.
+    </script>
+</body>
+</html>
