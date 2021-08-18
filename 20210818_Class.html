@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 模板</title>
+  </head>
+  <body>
+    <script>
+      //class寫法
+      class Person {
+        //constructor function
+        constructor(name, age, height, weight) {
+          (this.name = name),
+            (this.age = age),
+            (this.height = height),
+            (this.weight = weight);
+        }
+        sayHi(){
+            console.log(this.name + " says hi.");
+        }
+        intro(){
+            console.log("Hi my name is " + this.name + ".");
+        }
+      }
+
+      let Mike = new Person("Mike Huang", 26, 190, 90);
+      let Wilson = new Person("Wilson Wu", 25, 179, 75);
+      console.log(Mike);
+      console.log(Mike.sayHi === Wilson.sayHi);
+      //Person {name: "Mike Huang", age: 26, height: 190, weight: 90}
+      //true
+
+
+      class Student extends Person{
+          constructor(name, age, height, weight, major, grade){
+              super(name, age, height, weight);
+              this.major,
+              this.grade
+          }
+          study(){
+              console.log("Hi I am study now.");
+          }
+      }
+
+      let Portia = new Student("Portia Chen", 25, 179, 75, "cs", 3.85);
+      console.log(Portia);
+      Portia.study();
+      //Student {name: "Portia Chen", age: 25, height: 179, weight: 75}
+      //Hi I am study now.
+    </script>
+  </body>
+</html>
