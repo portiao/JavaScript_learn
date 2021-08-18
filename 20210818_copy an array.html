@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator copy array</title>
+  </head>
+  <body>
+    <script>
+      //how to copy an array?
+      //作法一
+        let friends = ["Mike", "Josh"];
+        let copy = ["Mike", "Josh"];
+        copy.push("Portia");
+
+        console.log(friends,copy);
+        // ["Mike", "Josh"]  ["Mike", "Josh", "Portia"]
+
+        //作法二 (比較好的做法)
+        let friendss = ["Erica", "Fion"];
+        let copyy = [...friendss];// spread operator
+        copyy.push("Portia");
+        console.log(friendss,copyy);
+        // ["Erica", "Fion"] ["Erica", "Fion", "Portia"]
+    </script>
+  </body>
+</html>
