@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        //Constructor Function (容易佔memery)
+        function Person(name, age, height, weight){
+            this.name = name,
+            this.age = age,
+            this.height = height,
+            this.weight = weight 
+        }
+
+         //Prototype(原型)
+        Person.prototype.sayHi = function(){
+            console.log(this.name + " says hi.");
+        }
+
+        Person.prototype.intro = function(){
+            console.log("Hi my name is " + this.name + ".");
+        }
+        let Wilson = new Person("Wilson Wang", 18, 178, 80);
+        let Portia = new Person("Portia Chen", 30, 160, 50);
+
+        console.log(Wilson.sayHi === Portia.sayHi); 
+        //true
+        
+        Wilson.sayHi();
+        //Wilson Wang says hi.
+        Portia.intro();
+        //Hi my name is Portia Chen.
+
+        //Prototype in Inheritance(繼承)
+        //範例 2.
+        let myName = "Portia Chen";
+
+        console.log(myName.toLocaleUpperCase()); //PORTIA CHEN
+        console.log(typeof myName); //string →→注意
+
+        let hisName = new String("Wilson Wang");
+        console.log(typeof hisName); //object →→注意
+
+        let num = new Array(15,22,33);
+        console.log(num); //[15, 22, 33]
+
+    </script>
+</body>
+</html>
