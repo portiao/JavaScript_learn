@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <script>
+        //Constructor Function 製作大量的object, 也可做 method
+        function Person(name, age, height, weight){
+            this.name = name,
+            this.age = age,
+            this.height = height,
+            this.weight = weight 
+            this.sayHi = function(){
+                console.log(this.name + " says hi.");
+            }
+        }
+
+        let Wilson = new Person("Wilson Wang", 18, 178, 80);
+        let Portia = new Person("Portia Chen", 30, 160, 50);
+
+        console.log(Wilson); 
+        console.log(Portia); 
+        Wilson.sayHi();
+        //Person {name: "Wilson Wang", age: 18, height: 178, weight: 80}
+        //Person {name: "Portia Chen", age: 30, height: 160, weight: 50}
+        //Wilson Wang says hi.
+
+    </script>
+</body>
+</html>
