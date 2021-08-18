@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 解構賦值(Destructuring assignment) </title>
+</head>
+<body>
+    <script>
+        // 解構賦值(Destructuring assignment) 
+        let Portia = {
+            firstName: "Portia Chen",
+            age:30,
+            gender:"felmale",
+            address: "Taipei",
+            height:165,
+            weight:45,
+            friend:{
+                fullName: 'Mike Huang',
+            }
+        }
+
+        let {firstName, gender} = Portia;
+        let {fullName} = Portia.friend;
+
+        console.log(firstName + "'s gender is" + gender + ".");
+        console.log(firstName + " has a friend, his name is " + fullName);
+        //Portia Chen's gender isfelmale.
+        //Portia Chen has a friend, his name is Mike Huang
+
+    </script>
+</body>
+</html>
+
